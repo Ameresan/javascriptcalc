@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #squre{
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>THE STUDENT RECORD</h1>
+    <label>tamil:</label>
+    <input id="one">
+    <br><br>
+    <label>english:</label>
+    <input id="two">
+    <br><br>
+    <label>maths</label>
+    <input id="three">
+    <br><br>
+    <label>science</label>
+    <input id="four">
+    <br><br>
+    <label>social</label>
+    <input id="five">
+    <br><br>
+    <button onclick="calc()">TOTAL</button>
+    <br><br>
+    <h2 id="res">the result store</h2>
+    <h4 id="res1"></h4>
+    <h4 id="res2"></h4>
+    <h4 id="res3"></h4>
+    <h4 id="res4"></h4>
+    <h5 id="res5"></h5>
+    <br>
+    <br>
+    <div id="squre">
+
+    </div>
+    <script>
+var tam=document.getElementById("one");
+var eng=document.getElementById("two");
+var math=document.getElementById("three");
+var scin=document.getElementById("four");
+var sol=document.getElementById("five");
+var store1=document.getElementById("res");
+var A=document.getElementById("res1");
+var B=document.getElementById("res2");
+var C=document.getElementById("res3");
+var D=document.getElementById("res4");
+var E=document.getElementById("res5");
+var box=document.getElementById("squre");
+
+
+
+function calc(){
+   var a=Number(tam.value)+Number(eng.value)+Number(math.value)+Number(scin.value)+Number(sol.value);
+//    console.log(a);
+
+   store1.innerHTML="the total" +" "+ a;
+
+
+
+   if(a>=450){
+    A.innerHTML="the result is pass:"+" "+ "A GRADE" ;
+    box.style.backgroundColor="green"
+   }
+   else if(a>=400&&a<=449){
+    B.innerHTML="the result is pass:"+" "+"B GRADE";
+    box.style.backgroundColor="blue"
+   }
+else if(a>=350&&a<=399){
+    C.innerHTML="the result is pass:"+" "+"C GRADE"
+    box.style.backgroundColor="yellow"
+}
+else if(a>=300&&a<=349){
+    D.innerHTML="the result is pass"+" "+"D GRADE"
+
+    
+}
+else{
+
+    E.innerHTML="FAIL"
+    box.style.backgroundColor="red";
+}
+
+}
+
+
+    </script>
+
+</body>
+</html>
